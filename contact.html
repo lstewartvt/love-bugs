@@ -80,8 +80,10 @@
 
     .header { background-color: var(--header-bg); box-shadow: var(--shadow-soft); left: 0; position: sticky; right: 0; top: 0; transition: background-color var(--transition-medium); z-index: 1000; }
     .header__inner { align-items: center; display: flex; justify-content: space-between; padding: var(--space-sm) var(--space-md); }
-    .logo { align-items: center; display: flex; }
+    .logo { align-items: center; display: flex; gap: var(--space-xs); }
     .logo__img { height: 45px; width: auto; }
+    .logo__text { color: var(--text-primary); font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; }
+    .logo__text span { color: var(--color-sage); }
     .nav { align-items: center; display: flex; gap: var(--space-lg); }
     .nav__link { color: var(--text-secondary); font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; padding: var(--space-xs) 0; position: relative; }
     .nav__link::after { background-color: var(--color-coral); bottom: 0; content: ''; height: 3px; left: 0; position: absolute; transform: scaleX(0); transition: transform var(--transition-fast); width: 100%; }
@@ -167,7 +169,7 @@
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm.png?updatedAt=1767763303745" alt="Love Bugs Learning Home" class="logo__img"></a>
+      <a href="index.html" class="logo"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm.png?updatedAt=1767763303745" alt="Love Bugs Learning Home" class="logo__img"><span class="logo__text">Love <span>Bugs</span></span></a>
       <button class="nav-toggle" aria-label="Toggle navigation"><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span></button>
       <nav class="nav">
         <a href="index.html" class="nav__link">Home</a>
