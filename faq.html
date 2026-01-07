@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about Love Bugs Learning Home - enrollment, hours, curriculum, meals, and more.">
+  <title>FAQ | Love Bugs Learning Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-sage: #7BA085;
+      --color-sage-light: #9BB8A3;
+      --color-sage-dark: #5D7A65;
+      --color-coral: #E8A87C;
+      --color-coral-light: #F2C4A5;
+      --color-coral-dark: #D4896A;
+      --color-sunshine: #F5D76E;
+      --color-sunshine-light: #FBE9A0;
+      --color-cream: #FDF8F3;
+      --color-cream-dark: #F5EDE4;
+      --color-white: #FFFFFF;
+      --color-text: #4A4A4A;
+      --color-text-light: #6B6B6B;
+      --color-text-dark: #2D2D2D;
+      --font-display: 'Nunito', sans-serif;
+      --font-body: 'Lato', sans-serif;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-3xl: 6rem;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 50%;
+      --shadow-soft: 0 4px 20px rgba(123, 160, 133, 0.12);
+      --shadow-medium: 0 8px 30px rgba(123, 160, 133, 0.18);
+      --shadow-lifted: 0 12px 40px rgba(123, 160, 133, 0.22);
+      --transition-fast: 0.2s ease;
+      --transition-medium: 0.3s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { background-color: var(--color-cream); color: var(--color-text); font-family: var(--font-body); font-size: 1rem; line-height: 1.7; min-height: 100vh; }
+    a { color: var(--color-sage-dark); text-decoration: none; transition: color var(--transition-fast); }
+    a:hover { color: var(--color-coral); }
+    ul, ol { list-style: none; }
+    h1, h2, h3, h4 { color: var(--color-text-dark); font-family: var(--font-display); font-weight: 700; line-height: 1.3; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    p { margin-bottom: var(--space-sm); }
+    p:last-child { margin-bottom: 0; }
+    .text-center { text-align: center; }
+    .section-subtitle { color: var(--color-sage); font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; letter-spacing: 2px; margin-bottom: var(--space-xs); text-transform: uppercase; }
+    .section-intro { color: var(--color-text-light); font-size: 1.125rem; margin: 0 auto var(--space-xl); max-width: 600px; }
+    .container { margin: 0 auto; max-width: 1200px; padding: 0 var(--space-md); width: 100%; }
+    .section { padding: var(--space-3xl) 0; }
+    .section--cream { background-color: var(--color-cream); }
+    .section--white { background-color: var(--color-white); }
+
+    /* Header */
+    .header { background-color: var(--color-white); box-shadow: var(--shadow-soft); left: 0; position: sticky; right: 0; top: 0; z-index: 1000; }
+    .header__inner { align-items: center; display: flex; justify-content: space-between; padding: var(--space-sm) var(--space-md); }
+    .logo { align-items: center; display: flex; gap: var(--space-xs); }
+    .logo__icon { color: var(--color-coral); font-size: 2rem; }
+    .logo__text { color: var(--color-text-dark); font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+    .logo__text span { color: var(--color-sage); }
+    .nav { display: flex; gap: var(--space-lg); }
+    .nav__link { color: var(--color-text); font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; padding: var(--space-xs) 0; position: relative; }
+    .nav__link::after { background-color: var(--color-coral); bottom: 0; content: ''; height: 3px; left: 0; position: absolute; transform: scaleX(0); transition: transform var(--transition-fast); width: 100%; }
+    .nav__link:hover::after, .nav__link--active::after { transform: scaleX(1); }
+    .nav__link--active { color: var(--color-sage-dark); }
+    .nav-toggle { background: none; border: none; cursor: pointer; display: none; flex-direction: column; gap: 5px; padding: var(--space-xs); }
+    .nav-toggle__bar { background-color: var(--color-text-dark); border-radius: 2px; height: 3px; width: 25px; }
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav { background-color: var(--color-white); box-shadow: var(--shadow-medium); flex-direction: column; gap: 0; left: 0; opacity: 0; padding: var(--space-md); pointer-events: none; position: absolute; right: 0; top: 100%; transform: translateY(-10px); transition: var(--transition-fast); }
+      .nav--open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      .nav__link { border-bottom: 1px solid var(--color-cream-dark); padding: var(--space-sm) 0; }
+      .nav__link:last-child { border-bottom: none; }
+    }
+
+    /* Buttons */
+    .btn { border: none; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
+    .btn--white { background-color: var(--color-white); color: var(--color-sage-dark); }
+    .btn--white:hover { background-color: var(--color-cream); transform: translateY(-2px); }
+    .btn--outline { background-color: transparent; border: 2px solid var(--color-sage); color: var(--color-sage); }
+    .btn--outline:hover { background-color: var(--color-sage); color: var(--color-white); }
+    .btn-group { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+    /* Page Header */
+    .page-header { background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%); padding: var(--space-3xl) 0 var(--space-xl); position: relative; text-align: center; }
+    .page-header::before { background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='4' fill='%237BA085' fill-opacity='0.08'/%3E%3C/svg%3E"); content: ''; inset: 0; position: absolute; }
+    .page-header__content { position: relative; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: var(--space-sm); max-width: 800px; margin: 0 auto; }
+    .faq-item { background-color: var(--color-white); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); overflow: hidden; }
+    .faq-question { align-items: center; background: none; border: none; color: var(--color-text-dark); cursor: pointer; display: flex; font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; gap: var(--space-sm); justify-content: space-between; padding: var(--space-md) var(--space-lg); text-align: left; transition: background-color var(--transition-fast); width: 100%; }
+    .faq-question:hover { background-color: var(--color-cream); }
+    .faq-question__icon { color: var(--color-sage); flex-shrink: 0; font-size: 1.5rem; transition: transform var(--transition-fast); }
+    .faq-item--open .faq-question__icon { transform: rotate(45deg); }
+    .faq-answer { border-top: 1px solid var(--color-cream-dark); color: var(--color-text-light); display: none; line-height: 1.8; padding: var(--space-md) var(--space-lg); }
+    .faq-item--open .faq-answer { display: block; }
+    .faq-answer ul { margin: var(--space-sm) 0; padding-left: var(--space-md); }
+    .faq-answer li { list-style: disc; margin-bottom: var(--space-xs); }
+    .faq-answer ol { margin: var(--space-sm) 0; padding-left: var(--space-md); }
+    .faq-answer ol li { list-style: decimal; margin-bottom: var(--space-xs); }
+
+    /* CTA Banner */
+    .cta-banner { background: linear-gradient(135deg, var(--color-sage) 0%, var(--color-sage-dark) 100%); border-radius: var(--radius-lg); padding: var(--space-xl); text-align: center; }
+    .cta-banner h3 { color: var(--color-white); margin-bottom: var(--space-sm); }
+    .cta-banner p { color: rgba(255, 255, 255, 0.9); margin-bottom: var(--space-lg); }
+
+    /* Footer */
+    .footer { background-color: var(--color-text-dark); color: rgba(255, 255, 255, 0.8); padding: var(--space-xl) 0 var(--space-md); }
+    .footer__inner { display: grid; gap: var(--space-xl); grid-template-columns: 2fr 1fr 1fr; margin-bottom: var(--space-xl); }
+    @media (max-width: 768px) { .footer__inner { grid-template-columns: 1fr; text-align: center; } }
+    .footer__brand .logo { margin-bottom: var(--space-sm); }
+    @media (max-width: 768px) { .footer__brand .logo { justify-content: center; } }
+    .footer__brand .logo__text { color: var(--color-white); }
+    .footer__brand p { font-size: 0.9rem; max-width: 300px; }
+    @media (max-width: 768px) { .footer__brand p { margin: 0 auto; } }
+    .footer__nav h4, .footer__contact h4 { color: var(--color-white); font-size: 1rem; margin-bottom: var(--space-sm); }
+    .footer__nav ul { display: flex; flex-direction: column; gap: var(--space-xs); }
+    .footer__nav a { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; }
+    .footer__nav a:hover { color: var(--color-coral-light); }
+    .footer__contact p { font-size: 0.9rem; margin-bottom: var(--space-xs); }
+    .footer__bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.85rem; padding-top: var(--space-md); text-align: center; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">🐞</span>
+        <span class="logo__text">Love <span>Bugs</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About Us</a>
+        <a href="faq.html" class="nav__link nav__link--active">FAQ</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container page-header__content">
+      <p class="section-subtitle">FAQ</p>
+      <h1>Frequently Asked Questions</h1>
+      <p class="section-intro" style="margin-bottom: 0;">Find answers to common questions about our program, enrollment, and what to expect.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="faq-list">
+        
+        <div class="faq-item faq-item--open">
+          <button class="faq-question">
+            <span>What is a Family Child Care Learning Home (FCCLH)?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>A FCCLH is a Georgia-licensed home-based child care program with a small group setting. Love Bugs Learning Home provides care for 6 or fewer children, allowing for more individualized attention and a calm, consistent routine.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What ages do you accept?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We typically serve children ages 5 weeks–5+ years. If you're unsure, reach out—placement depends on current openings and age mix.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are your hours and days of operation?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We are open:</p>
+            <ul>
+              <li><strong>Day Care:</strong> Weekdays 8:00 AM – 6:00 PM</li>
+              <li><strong>After-School Child Care:</strong> Weekdays 5:00 AM – 8:00 AM and 6:00 PM – 10:00 PM</li>
+              <li><strong>Overnight Child Care:</strong> Weekdays 10:00 PM – 7:00 AM; Weekends available upon request</li>
+            </ul>
+            <p>Early drop-off/late pick-up options may be available based on scheduling and availability.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Where are you located?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We are located in Decatur/Snapfinger, DeKalb County, Georgia. The exact address and tour details are shared after an initial phone call or message.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I enroll my child?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Enrollment is simple:</p>
+            <ol>
+              <li>Request Enrollment Info</li>
+              <li>Schedule a Tour / Meet & Greet (optional)</li>
+              <li>Review and sign the parent packet + policies</li>
+              <li>Confirm your start date and complete registration (fee included)</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you offer a learning curriculum?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Ms. Alexis focuses on early literacy, early math, language development, fine-motor skills, and social-emotional growth through age-appropriate, play-based learning.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is your approach to discipline and behavior?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We use positive guidance: clear expectations, redirection, modeling, and helping children learn to use words for big feelings. Our goal is to build self-control, confidence, and kindness.</p>
+            <p><strong>Love Bugs Learning Home does not condone:</strong></p>
+            <ul>
+              <li>Corporal punishment or threat of</li>
+              <li>Disciplinary acts toward food, nap, or toilet</li>
+              <li>Threat of physical punishment</li>
+              <li>Humiliation or yelling</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you provide meals and snacks?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We provide breakfast, lunch, and PM snack for an additional fee. Families are required to provide formula/breastmilk or any special diet items. We can accommodate allergies with a clear written plan.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do children go outside every day?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, weather permitting. Outdoor play supports movement, mood, and social development. We also do indoor gross-motor activities on rainy or extreme-weather days.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is your program safe and licensed?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Love Bugs Learning Home operates as a licensed Georgia Family Child Care Learning Home and follows required health and safety guidelines. We also maintain emergency plans and safe pickup procedures.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What items should I bring for my child?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Common items include:</p>
+            <ul>
+              <li>Change of clothes (mainly pants/shorts, underwear)</li>
+              <li>Diapers/wipes (if needed)</li>
+              <li>A comfort item for rest time (if desired)</li>
+              <li>Infant items (formula/breastmilk, bottles, etc.)</li>
+              <li>Breakfast/lunch/PM snack (if you elect not to pay the additional fee)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do tours work?</span>
+            <span class="faq-question__icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Tours are scheduled by appointment. You'll meet Ms. Alexis, see the learning/play areas, review the daily routine, and discuss your child's needs and start date.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="cta-banner">
+        <h3>Still have questions?</h3>
+        <p>We're happy to help! Reach out to us directly or schedule a tour to learn more.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="contact.html" class="btn btn--white">Contact Us</a>
+          <a href="https://calendly.com/your-link" class="btn btn--outline" style="border-color: white; color: white;" target="_blank" rel="noopener">Schedule a Tour</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <span class="logo__icon">🐞</span>
+            <span class="logo__text">Love <span>Bugs</span></span>
+          </a>
+          <p>A warm, structured Georgia Family Child Care Learning Home where little learners grow big confidence.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p>Decatur/Snapfinger<br>DeKalb County, GA</p>
+          <p>(XXX) XXX-XXXX</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Love Bugs Learning Home. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile nav
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('nav--open');
+        });
+      }
+      
+      // FAQ accordions
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(function(item) {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', function() {
+          // Close others
+          faqItems.forEach(function(other) {
+            if (other !== item) other.classList.remove('faq-item--open');
+          });
+          // Toggle current
+          item.classList.toggle('faq-item--open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

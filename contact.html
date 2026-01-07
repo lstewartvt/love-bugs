@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Love Bugs Learning Home to schedule a tour or request enrollment information for your child.">
+  <title>Contact | Love Bugs Learning Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-sage: #7BA085;
+      --color-sage-light: #9BB8A3;
+      --color-sage-dark: #5D7A65;
+      --color-coral: #E8A87C;
+      --color-coral-light: #F2C4A5;
+      --color-coral-dark: #D4896A;
+      --color-sunshine: #F5D76E;
+      --color-sunshine-light: #FBE9A0;
+      --color-cream: #FDF8F3;
+      --color-cream-dark: #F5EDE4;
+      --color-white: #FFFFFF;
+      --color-text: #4A4A4A;
+      --color-text-light: #6B6B6B;
+      --color-text-dark: #2D2D2D;
+      --font-display: 'Nunito', sans-serif;
+      --font-body: 'Lato', sans-serif;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-3xl: 6rem;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 50%;
+      --shadow-soft: 0 4px 20px rgba(123, 160, 133, 0.12);
+      --shadow-medium: 0 8px 30px rgba(123, 160, 133, 0.18);
+      --transition-fast: 0.2s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { background-color: var(--color-cream); color: var(--color-text); font-family: var(--font-body); font-size: 1rem; line-height: 1.7; min-height: 100vh; }
+    a { color: var(--color-sage-dark); text-decoration: none; transition: color var(--transition-fast); }
+    a:hover { color: var(--color-coral); }
+    ul, ol { list-style: none; }
+    h1, h2, h3, h4 { color: var(--color-text-dark); font-family: var(--font-display); font-weight: 700; line-height: 1.3; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+    h4 { font-size: 1.25rem; }
+    p { margin-bottom: var(--space-sm); }
+    p:last-child { margin-bottom: 0; }
+    .text-center { text-align: center; }
+    .section-subtitle { color: var(--color-sage); font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; letter-spacing: 2px; margin-bottom: var(--space-xs); text-transform: uppercase; }
+    .section-title { margin-bottom: var(--space-md); }
+    .section-intro { color: var(--color-text-light); font-size: 1.125rem; margin: 0 auto var(--space-xl); max-width: 600px; }
+    .container { margin: 0 auto; max-width: 1200px; padding: 0 var(--space-md); width: 100%; }
+    .section { padding: var(--space-3xl) 0; }
+    .section--cream { background-color: var(--color-cream); }
+    .section--white { background-color: var(--color-white); }
+
+    /* Header */
+    .header { background-color: var(--color-white); box-shadow: var(--shadow-soft); left: 0; position: sticky; right: 0; top: 0; z-index: 1000; }
+    .header__inner { align-items: center; display: flex; justify-content: space-between; padding: var(--space-sm) var(--space-md); }
+    .logo { align-items: center; display: flex; gap: var(--space-xs); }
+    .logo__icon { color: var(--color-coral); font-size: 2rem; }
+    .logo__text { color: var(--color-text-dark); font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+    .logo__text span { color: var(--color-sage); }
+    .nav { display: flex; gap: var(--space-lg); }
+    .nav__link { color: var(--color-text); font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; padding: var(--space-xs) 0; position: relative; }
+    .nav__link::after { background-color: var(--color-coral); bottom: 0; content: ''; height: 3px; left: 0; position: absolute; transform: scaleX(0); transition: transform var(--transition-fast); width: 100%; }
+    .nav__link:hover::after, .nav__link--active::after { transform: scaleX(1); }
+    .nav__link--active { color: var(--color-sage-dark); }
+    .nav-toggle { background: none; border: none; cursor: pointer; display: none; flex-direction: column; gap: 5px; padding: var(--space-xs); }
+    .nav-toggle__bar { background-color: var(--color-text-dark); border-radius: 2px; height: 3px; width: 25px; }
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav { background-color: var(--color-white); box-shadow: var(--shadow-medium); flex-direction: column; gap: 0; left: 0; opacity: 0; padding: var(--space-md); pointer-events: none; position: absolute; right: 0; top: 100%; transform: translateY(-10px); transition: var(--transition-fast); }
+      .nav--open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      .nav__link { border-bottom: 1px solid var(--color-cream-dark); padding: var(--space-sm) 0; }
+      .nav__link:last-child { border-bottom: none; }
+    }
+
+    /* Buttons */
+    .btn { border: none; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
+    .btn--primary { background-color: var(--color-coral); color: var(--color-white); }
+    .btn--primary:hover { background-color: var(--color-coral-dark); color: var(--color-white); transform: translateY(-2px); }
+    .btn--secondary { background-color: var(--color-sage); color: var(--color-white); }
+    .btn--secondary:hover { background-color: var(--color-sage-dark); color: var(--color-white); transform: translateY(-2px); }
+
+    /* Page Header */
+    .page-header { background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%); padding: var(--space-3xl) 0 var(--space-xl); position: relative; text-align: center; }
+    .page-header::before { background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='4' fill='%237BA085' fill-opacity='0.08'/%3E%3C/svg%3E"); content: ''; inset: 0; position: absolute; }
+    .page-header__content { position: relative; }
+
+    /* Contact Grid */
+    .contact-grid { display: grid; gap: var(--space-xl); grid-template-columns: 1fr 1fr; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* Contact Info */
+    .contact-info { background-color: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: var(--space-xl); }
+    .contact-info h3 { margin-bottom: var(--space-lg); }
+    .contact-list { display: flex; flex-direction: column; gap: var(--space-md); margin-bottom: var(--space-xl); }
+    .contact-list__item { align-items: flex-start; display: flex; gap: var(--space-sm); }
+    .contact-list__icon { align-items: center; background-color: var(--color-sage-light); border-radius: var(--radius-full); color: var(--color-sage-dark); display: flex; flex-shrink: 0; font-size: 1rem; height: 40px; justify-content: center; width: 40px; }
+    .contact-list__item strong { color: var(--color-text-dark); display: block; font-family: var(--font-display); }
+    .contact-list__item span { color: var(--color-text-light); font-size: 0.9rem; }
+    .contact-hours h4 { margin-bottom: var(--space-sm); }
+    .hours-list { display: flex; flex-direction: column; gap: var(--space-xs); }
+    .hours-list__item { align-items: center; display: flex; justify-content: space-between; }
+    .hours-list__item span:first-child { color: var(--color-text); font-weight: 500; }
+    .hours-list__item span:last-child { color: var(--color-text-light); }
+
+    /* Forms */
+    .form-card { background-color: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: var(--space-xl); }
+    .form-card h3 { margin-bottom: var(--space-xs); }
+    .form-card__intro { color: var(--color-text-light); margin-bottom: var(--space-lg); }
+    .form-group { margin-bottom: var(--space-md); }
+    .form-row { display: grid; gap: var(--space-md); grid-template-columns: 1fr 1fr; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-label { color: var(--color-text-dark); display: block; font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; margin-bottom: var(--space-xs); }
+    .form-label span { color: var(--color-coral); }
+    .form-input, .form-select, .form-textarea { background-color: var(--color-cream); border: 2px solid transparent; border-radius: var(--radius-sm); color: var(--color-text); font-family: var(--font-body); font-size: 1rem; padding: var(--space-sm); transition: border-color var(--transition-fast), background-color var(--transition-fast); width: 100%; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { background-color: var(--color-white); border-color: var(--color-sage); outline: none; }
+    .form-textarea { min-height: 120px; resize: vertical; }
+    .form-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236B6B6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-position: right var(--space-sm) center; background-repeat: no-repeat; background-size: 18px; cursor: pointer; padding-right: var(--space-xl); }
+    .form-checkbox-group { display: flex; flex-direction: column; gap: var(--space-xs); }
+    .form-checkbox { align-items: center; cursor: pointer; display: flex; gap: var(--space-xs); }
+    .form-checkbox input { accent-color: var(--color-sage); height: 18px; width: 18px; }
+    .form-section-title { border-bottom: 1px solid var(--color-cream-dark); color: var(--color-sage-dark); font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: var(--space-md); margin-top: var(--space-lg); padding-bottom: var(--space-xs); }
+    .form-section-title:first-of-type { margin-top: 0; }
+
+    /* Footer */
+    .footer { background-color: var(--color-text-dark); color: rgba(255, 255, 255, 0.8); padding: var(--space-xl) 0 var(--space-md); }
+    .footer__inner { display: grid; gap: var(--space-xl); grid-template-columns: 2fr 1fr 1fr; margin-bottom: var(--space-xl); }
+    @media (max-width: 768px) { .footer__inner { grid-template-columns: 1fr; text-align: center; } }
+    .footer__brand .logo { margin-bottom: var(--space-sm); }
+    @media (max-width: 768px) { .footer__brand .logo { justify-content: center; } }
+    .footer__brand .logo__text { color: var(--color-white); }
+    .footer__brand p { font-size: 0.9rem; max-width: 300px; }
+    @media (max-width: 768px) { .footer__brand p { margin: 0 auto; } }
+    .footer__nav h4, .footer__contact h4 { color: var(--color-white); font-size: 1rem; margin-bottom: var(--space-sm); }
+    .footer__nav ul { display: flex; flex-direction: column; gap: var(--space-xs); }
+    .footer__nav a { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; }
+    .footer__nav a:hover { color: var(--color-coral-light); }
+    .footer__contact p { font-size: 0.9rem; margin-bottom: var(--space-xs); }
+    .footer__bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.85rem; padding-top: var(--space-md); text-align: center; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">🐞</span>
+        <span class="logo__text">Love <span>Bugs</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About Us</a>
+        <a href="faq.html" class="nav__link">FAQ</a>
+        <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container page-header__content">
+      <p class="section-subtitle">Get In Touch</p>
+      <h1>Contact Us</h1>
+      <p class="section-intro" style="margin-bottom: 0;">We'd love to hear from you! Reach out with questions or to schedule a tour.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-list">
+            <div class="contact-list__item">
+              <div class="contact-list__icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <span>Decatur/Snapfinger, DeKalb County, GA<br>(Exact address shared after initial contact)</span>
+              </div>
+            </div>
+            <div class="contact-list__item">
+              <div class="contact-list__icon">📞</div>
+              <div>
+                <strong>Phone</strong>
+                <span>(XXX) XXX-XXXX</span>
+              </div>
+            </div>
+            <div class="contact-list__item">
+              <div class="contact-list__icon">📧</div>
+              <div>
+                <strong>Email</strong>
+                <span>email@example.com</span>
+              </div>
+            </div>
+            <div class="contact-list__item">
+              <div class="contact-list__icon">📅</div>
+              <div>
+                <strong>Schedule a Tour</strong>
+                <span><a href="https://calendly.com/your-link" target="_blank" rel="noopener">Book via Calendly →</a></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-hours">
+            <h4>Hours of Operation</h4>
+            <div class="hours-list">
+              <div class="hours-list__item">
+                <span>Day Care</span>
+                <span>Mon–Fri: 8AM – 6PM</span>
+              </div>
+              <div class="hours-list__item">
+                <span>After-School (AM)</span>
+                <span>Mon–Fri: 5AM – 8AM</span>
+              </div>
+              <div class="hours-list__item">
+                <span>After-School (PM)</span>
+                <span>Mon–Fri: 6PM – 10PM</span>
+              </div>
+              <div class="hours-list__item">
+                <span>Overnight</span>
+                <span>Mon–Fri: 10PM – 7AM</span>
+              </div>
+              <div class="hours-list__item">
+                <span>Weekends</span>
+                <span>Upon request</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-card">
+          <h3>Send Us a Message</h3>
+          <p class="form-card__intro">Have a question? Fill out the form below and we'll get back to you soon.</p>
+          
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Name <span>*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address <span>*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" name="phone" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Subject <span>*</span></label>
+              <select id="contact-subject" name="subject" class="form-select" required>
+                <option value="">Select a topic...</option>
+                <option value="general">General Inquiry</option>
+                <option value="tour">Schedule a Tour</option>
+                <option value="enrollment">Enrollment Question</option>
+                <option value="pricing">Pricing & Rates</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Your Message <span>*</span></label>
+              <textarea id="contact-message" name="message" class="form-textarea" required placeholder="Tell us how we can help..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Enrollment Form Section -->
+  <section class="section section--cream" id="enrollment">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-subtitle">Start Your Journey</p>
+        <h2 class="section-title">Request Enrollment Information</h2>
+        <p class="section-intro">Fill out the form below and we'll send you information about openings, rates, and next steps.</p>
+      </div>
+      
+      <div class="form-card" style="max-width: 700px; margin: 0 auto;">
+        <form id="enrollment-form">
+          
+          <!-- Parent/Guardian Information -->
+          <h4 class="form-section-title">Parent/Guardian Information</h4>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="parent-first">First Name <span>*</span></label>
+              <input type="text" id="parent-first" name="parent_first" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="parent-last">Last Name <span>*</span></label>
+              <input type="text" id="parent-last" name="parent_last" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="parent-email">Email Address <span>*</span></label>
+              <input type="email" id="parent-email" name="parent_email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="parent-phone">Phone Number <span>*</span></label>
+              <input type="tel" id="parent-phone" name="parent_phone" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="parent-address">City/Neighborhood</label>
+            <input type="text" id="parent-address" name="parent_address" class="form-input" placeholder="e.g., Decatur, Stone Mountain, etc.">
+          </div>
+          
+          <!-- Child Information -->
+          <h4 class="form-section-title">Child Information</h4>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="child-first">Child's First Name <span>*</span></label>
+              <input type="text" id="child-first" name="child_first" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="child-last">Child's Last Name <span>*</span></label>
+              <input type="text" id="child-last" name="child_last" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="child-dob">Date of Birth <span>*</span></label>
+              <input type="date" id="child-dob" name="child_dob" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="child-gender">Gender</label>
+              <select id="child-gender" name="child_gender" class="form-select">
+                <option value="">Select...</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other/Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Care Needs -->
+          <h4 class="form-section-title">Care Needs</h4>
+          
+          <div class="form-group">
+            <label class="form-label">Type of Care Needed <span>*</span></label>
+            <div class="form-checkbox-group">
+              <label class="form-checkbox">
+                <input type="checkbox" name="care_type[]" value="day_care">
+                Day Care (8AM – 6PM)
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="care_type[]" value="afterschool_am">
+                After-School AM (5AM – 8AM)
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="care_type[]" value="afterschool_pm">
+                After-School PM (6PM – 10PM)
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="care_type[]" value="overnight">
+                Overnight Care
+              </label>
+              <label class="form-checkbox">
+                <input type="checkbox" name="care_type[]" value="weekend">
+                Weekend Care
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="start-date">Desired Start Date</label>
+              <input type="date" id="start-date" name="start_date" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="schedule-type">Schedule Type</label>
+              <select id="schedule-type" name="schedule_type" class="form-select">
+                <option value="">Select...</option>
+                <option value="full_time">Full-Time</option>
+                <option value="part_time">Part-Time</option>
+                <option value="flexible">Flexible/As Needed</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="special-needs">Special Needs or Allergies</label>
+            <textarea id="special-needs" name="special_needs" class="form-textarea" rows="3" placeholder="Please share any allergies, dietary restrictions, or special considerations..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="how-heard">How did you hear about us?</label>
+            <select id="how-heard" name="how_heard" class="form-select">
+              <option value="">Select...</option>
+              <option value="google">Google Search</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="referral">Friend/Family Referral</option>
+              <option value="community">Community Board/Flyer</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="additional-info">Anything else you'd like us to know?</label>
+            <textarea id="additional-info" name="additional_info" class="form-textarea" rows="3" placeholder="Feel free to share any questions or additional information..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn--secondary" style="width: 100%;">Request Enrollment Info</button>
+          
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <span class="logo__icon">🐞</span>
+            <span class="logo__text">Love <span>Bugs</span></span>
+          </a>
+          <p>A warm, structured Georgia Family Child Care Learning Home where little learners grow big confidence.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p>Decatur/Snapfinger<br>DeKalb County, GA</p>
+          <p>(XXX) XXX-XXXX</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Love Bugs Learning Home. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('nav--open');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

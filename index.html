@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Love Bugs Learning Home - A warm, structured Georgia Family Child Care Learning Home in DeKalb County focused on early academics, social skills, and joyful routines.">
+  <title>Love Bugs Learning Home | Where Little Learners Grow Big Confidence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ==========================================================================
+       Love Bugs Learning Home - Main Stylesheet
+       ========================================================================== */
+
+    :root {
+      --color-sage: #7BA085;
+      --color-sage-light: #9BB8A3;
+      --color-sage-dark: #5D7A65;
+      --color-coral: #E8A87C;
+      --color-coral-light: #F2C4A5;
+      --color-coral-dark: #D4896A;
+      --color-sunshine: #F5D76E;
+      --color-sunshine-light: #FBE9A0;
+      --color-cream: #FDF8F3;
+      --color-cream-dark: #F5EDE4;
+      --color-white: #FFFFFF;
+      --color-text: #4A4A4A;
+      --color-text-light: #6B6B6B;
+      --color-text-dark: #2D2D2D;
+      --font-display: 'Nunito', sans-serif;
+      --font-body: 'Lato', sans-serif;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 50%;
+      --shadow-soft: 0 4px 20px rgba(123, 160, 133, 0.12);
+      --shadow-medium: 0 8px 30px rgba(123, 160, 133, 0.18);
+      --shadow-lifted: 0 12px 40px rgba(123, 160, 133, 0.22);
+      --transition-fast: 0.2s ease;
+      --transition-medium: 0.3s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-cream);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--color-sage-dark);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    a:hover {
+      color: var(--color-coral);
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--color-text-dark);
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+    h4 { font-size: 1.25rem; }
+
+    p {
+      margin-bottom: var(--space-sm);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .section-subtitle {
+      color: var(--color-sage);
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: var(--space-xs);
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-bottom: var(--space-md);
+    }
+
+    .section-intro {
+      color: var(--color-text-light);
+      font-size: 1.125rem;
+      margin: 0 auto var(--space-xl);
+      max-width: 600px;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 0 var(--space-md);
+      width: 100%;
+    }
+
+    .section {
+      padding: var(--space-3xl) 0;
+    }
+
+    .section--cream {
+      background-color: var(--color-cream);
+    }
+
+    .section--white {
+      background-color: var(--color-white);
+    }
+
+    .section--sage {
+      background-color: var(--color-sage);
+      color: var(--color-white);
+    }
+
+    .section--sage h2, .section--sage h3, .section--sage h4 {
+      color: var(--color-white);
+    }
+
+    .section--sage .section-subtitle {
+      color: var(--color-sunshine-light);
+    }
+
+    /* Header */
+    .header {
+      background-color: var(--color-white);
+      box-shadow: var(--shadow-soft);
+      left: 0;
+      position: sticky;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header__inner {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) var(--space-md);
+    }
+
+    .logo {
+      align-items: center;
+      display: flex;
+      gap: var(--space-xs);
+    }
+
+    .logo__icon {
+      color: var(--color-coral);
+      font-size: 2rem;
+    }
+
+    .logo__text {
+      color: var(--color-text-dark);
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .logo__text span {
+      color: var(--color-sage);
+    }
+
+    .nav {
+      display: flex;
+      gap: var(--space-lg);
+    }
+
+    .nav__link {
+      color: var(--color-text);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: var(--space-xs) 0;
+      position: relative;
+    }
+
+    .nav__link::after {
+      background-color: var(--color-coral);
+      bottom: 0;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform var(--transition-fast);
+      width: 100%;
+    }
+
+    .nav__link:hover::after, .nav__link--active::after {
+      transform: scaleX(1);
+    }
+
+    .nav__link--active {
+      color: var(--color-sage-dark);
+    }
+
+    .nav-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: var(--space-xs);
+    }
+
+    .nav-toggle__bar {
+      background-color: var(--color-text-dark);
+      border-radius: 2px;
+      height: 3px;
+      transition: var(--transition-fast);
+      width: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav {
+        background-color: var(--color-white);
+        box-shadow: var(--shadow-medium);
+        flex-direction: column;
+        gap: 0;
+        left: 0;
+        opacity: 0;
+        padding: var(--space-md);
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        transform: translateY(-10px);
+        transition: var(--transition-fast);
+      }
+      .nav--open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      .nav__link {
+        border-bottom: 1px solid var(--color-cream-dark);
+        padding: var(--space-sm) 0;
+      }
+      .nav__link:last-child { border-bottom: none; }
+    }
+
+    /* Buttons */
+    .btn {
+      border: none;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      gap: var(--space-xs);
+      justify-content: center;
+      padding: var(--space-sm) var(--space-lg);
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+
+    .btn--primary {
+      background-color: var(--color-coral);
+      color: var(--color-white);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--color-coral-dark);
+      color: var(--color-white);
+      transform: translateY(-2px);
+    }
+
+    .btn--secondary {
+      background-color: var(--color-sage);
+      color: var(--color-white);
+    }
+
+    .btn--secondary:hover {
+      background-color: var(--color-sage-dark);
+      color: var(--color-white);
+      transform: translateY(-2px);
+    }
+
+    .btn--outline {
+      background-color: transparent;
+      border: 2px solid var(--color-sage);
+      color: var(--color-sage);
+    }
+
+    .btn--outline:hover {
+      background-color: var(--color-sage);
+      color: var(--color-white);
+    }
+
+    .btn--white {
+      background-color: var(--color-white);
+      color: var(--color-sage-dark);
+    }
+
+    .btn--white:hover {
+      background-color: var(--color-cream);
+      color: var(--color-sage-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
+      overflow: hidden;
+      padding: var(--space-3xl) 0;
+      position: relative;
+    }
+
+    .hero::before {
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='4' fill='%237BA085' fill-opacity='0.08'/%3E%3C/svg%3E");
+      content: '';
+      inset: 0;
+      position: absolute;
+    }
+
+    .hero__inner {
+      align-items: center;
+      display: grid;
+      gap: var(--space-xl);
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+    }
+
+    .hero__content {
+      max-width: 560px;
+    }
+
+    .hero__badge {
+      background-color: var(--color-sage-light);
+      border-radius: var(--radius-lg);
+      color: var(--color-white);
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+      padding: var(--space-xs) var(--space-sm);
+    }
+
+    .hero__title {
+      margin-bottom: var(--space-md);
+    }
+
+    .hero__title span {
+      color: var(--color-coral);
+    }
+
+    .hero__description {
+      color: var(--color-text-light);
+      font-size: 1.125rem;
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero__caregiver {
+      align-items: center;
+      display: flex;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero__caregiver-avatar {
+      background-color: var(--color-sage-light);
+      border-radius: var(--radius-full);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      height: 50px;
+      justify-content: center;
+      width: 50px;
+    }
+
+    .hero__caregiver-info strong {
+      color: var(--color-text-dark);
+      display: block;
+      font-family: var(--font-display);
+    }
+
+    .hero__caregiver-info span {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
+
+    .hero__image {
+      position: relative;
+    }
+
+    .hero__image-placeholder {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--color-sage-light) 0%, var(--color-sage) 100%);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lifted);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-family: var(--font-display);
+      gap: var(--space-sm);
+      justify-content: center;
+      color: var(--color-white);
+    }
+
+    .hero__image-placeholder span {
+      font-size: 4rem;
+    }
+
+    .hero__floating-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-md);
+      bottom: -20px;
+      box-shadow: var(--shadow-medium);
+      left: -30px;
+      padding: var(--space-sm) var(--space-md);
+      position: absolute;
+    }
+
+    .hero__floating-card strong {
+      color: var(--color-sage);
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+    }
+
+    .hero__floating-card span {
+      color: var(--color-text-light);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero__content { margin: 0 auto; }
+      .hero__caregiver { justify-content: center; }
+      .btn-group { justify-content: center; }
+      .hero__image {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .hero__floating-card {
+        bottom: -10px;
+        left: 10px;
+      }
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      gap: var(--space-lg);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .feature-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      padding: var(--space-lg);
+      transition: all var(--transition-medium);
+    }
+
+    .feature-card:hover {
+      box-shadow: var(--shadow-lifted);
+      transform: translateY(-5px);
+    }
+
+    .feature-card__icon {
+      align-items: center;
+      background-color: var(--color-coral-light);
+      border-radius: var(--radius-md);
+      color: var(--color-coral-dark);
+      display: flex;
+      font-size: 1.75rem;
+      height: 60px;
+      justify-content: center;
+      margin-bottom: var(--space-md);
+      width: 60px;
+    }
+
+    .feature-card:nth-child(2) .feature-card__icon {
+      background-color: var(--color-sage-light);
+      color: var(--color-sage-dark);
+    }
+
+    .feature-card:nth-child(3) .feature-card__icon {
+      background-color: var(--color-sunshine-light);
+      color: #C4A84B;
+    }
+
+    .feature-card:nth-child(4) .feature-card__icon {
+      background-color: #E8D4F0;
+      color: #9B6FB0;
+    }
+
+    .feature-card__title {
+      margin-bottom: var(--space-xs);
+    }
+
+    .feature-card__text {
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      gap: var(--space-md);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .skill-item {
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      gap: var(--space-sm);
+      padding: var(--space-md);
+      transition: background-color var(--transition-fast);
+    }
+
+    .skill-item:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .skill-item__icon {
+      flex-shrink: 0;
+      font-size: 1.5rem;
+    }
+
+    .skill-item__text {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* Schedule */
+    .schedule {
+      display: grid;
+      gap: var(--space-lg);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .schedule-item {
+      align-items: flex-start;
+      display: flex;
+      gap: var(--space-md);
+    }
+
+    .schedule-item__icon {
+      align-items: center;
+      background-color: var(--color-sage);
+      border-radius: var(--radius-full);
+      color: var(--color-white);
+      display: flex;
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      height: 50px;
+      justify-content: center;
+      width: 50px;
+    }
+
+    .schedule-item__content h4 {
+      color: var(--color-text-dark);
+      margin-bottom: var(--space-xs);
+    }
+
+    .schedule-item__content p {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Enrollment */
+    .enrollment-grid {
+      display: grid;
+      gap: var(--space-lg);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-bottom: var(--space-xl);
+    }
+
+    .enrollment-item {
+      align-items: flex-start;
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    .enrollment-item__icon {
+      color: var(--color-coral);
+      flex-shrink: 0;
+      font-size: 1.25rem;
+    }
+
+    .enrollment-item strong {
+      color: var(--color-text-dark);
+      display: block;
+      font-family: var(--font-display);
+      margin-bottom: 2px;
+    }
+
+    .enrollment-item span {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--color-sage) 0%, var(--color-sage-dark) 100%);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+    }
+
+    .cta-banner h3 {
+      color: var(--color-white);
+      margin-bottom: var(--space-sm);
+    }
+
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: var(--space-lg);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-text-dark);
+      color: rgba(255, 255, 255, 0.8);
+      padding: var(--space-xl) 0 var(--space-md);
+    }
+
+    .footer__inner {
+      display: grid;
+      gap: var(--space-xl);
+      grid-template-columns: 2fr 1fr 1fr;
+      margin-bottom: var(--space-xl);
+    }
+
+    @media (max-width: 768px) {
+      .footer__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .footer__brand .logo {
+      margin-bottom: var(--space-sm);
+    }
+
+    @media (max-width: 768px) {
+      .footer__brand .logo { justify-content: center; }
+    }
+
+    .footer__brand .logo__text {
+      color: var(--color-white);
+    }
+
+    .footer__brand p {
+      font-size: 0.9rem;
+      max-width: 300px;
+    }
+
+    @media (max-width: 768px) {
+      .footer__brand p { margin: 0 auto; }
+    }
+
+    .footer__nav h4, .footer__contact h4 {
+      color: var(--color-white);
+      font-size: 1rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer__nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .footer__nav a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      transition: color var(--transition-fast);
+    }
+
+    .footer__nav a:hover {
+      color: var(--color-coral-light);
+    }
+
+    .footer__contact p {
+      font-size: 0.9rem;
+      margin-bottom: var(--space-xs);
+    }
+
+    .footer__phone {
+      display: block;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.85rem;
+      padding-top: var(--space-md);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">🐞</span>
+        <span class="logo__text">Love <span>Bugs</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav__link nav__link--active">Home</a>
+        <a href="about.html" class="nav__link">About Us</a>
+        <a href="faq.html" class="nav__link">FAQ</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__badge">Georgia Family Child Care Learning Home</span>
+        <h1 class="hero__title">Where little learners grow <span>big confidence</span></h1>
+        <p class="hero__description">A warm, structured learning home in DeKalb County focused on early academics, social skills, and joyful routines for children ages 5 weeks to 5+ years.</p>
+        <div class="hero__caregiver">
+          <div class="hero__caregiver-avatar">👩‍🏫</div>
+          <div class="hero__caregiver-info">
+            <strong>Ms. Alexis Patterson</strong>
+            <span>7+ years of child care experience</span>
+          </div>
+        </div>
+        <div class="btn-group">
+          <a href="https://calendly.com/your-link" class="btn btn--primary" target="_blank" rel="noopener">Schedule a Tour</a>
+          <a href="contact.html#enrollment" class="btn btn--outline">Request Enrollment Info</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <div class="hero__image-placeholder">
+          <span>📸</span>
+          <p>Photo Placeholder</p>
+        </div>
+        <div class="hero__floating-card">
+          <strong>6 or fewer</strong>
+          <span>children for individual attention</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="section section--white">
+    <div class="container text-center">
+      <p class="section-subtitle">Our Approach</p>
+      <h2 class="section-title">Play-based learning with intentional education</h2>
+      <p class="section-intro">At Love Bugs Learning Home, children thrive in a small-group environment where they're known, supported, and encouraged every day. Ms. Alexis blends play-based learning with intentional early education.</p>
+    </div>
+  </section>
+
+  <!-- Skills / Learning Areas -->
+  <section class="section section--sage">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-subtitle">Building Skills That Matter</p>
+        <h2 class="section-title">What children learn at Love Bugs</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <span class="skill-item__icon">📖</span>
+          <span class="skill-item__text">Early literacy & language (letters, sounds, vocabulary, storytelling)</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-item__icon">🔢</span>
+          <span class="skill-item__text">Early math & thinking (counting, patterns, problem-solving)</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-item__icon">💚</span>
+          <span class="skill-item__text">Social-emotional growth (sharing, empathy, self-control, confidence)</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-item__icon">🎒</span>
+          <span class="skill-item__text">Kindergarten readiness habits (routines, listening, independence)</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-item__icon">🌟</span>
+          <span class="skill-item__text">Ages 5+: After-school learning retention and cool down</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Us Different -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-subtitle">Why Choose Us</p>
+        <h2 class="section-title">What makes Love Bugs different?</h2>
+      </div>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-card__icon">👶</div>
+          <h3 class="feature-card__title">Small-group care with big individual attention</h3>
+          <p class="feature-card__text">Children aren't "one of many." We take time to understand each child's personality, learning style, and needs.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">⚖️</div>
+          <h3 class="feature-card__title">Balanced day: learning + play + rest</h3>
+          <p class="feature-card__text">A predictable routine helps children feel safe, calm, and ready to learn throughout the day.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🤝</div>
+          <h3 class="feature-card__title">Social development is part of the curriculum</h3>
+          <p class="feature-card__text">We model kindness, coach problem-solving, and teach children how to be great friends.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">👨‍👩‍👧</div>
+          <h3 class="feature-card__title">Family partnership & communication</h3>
+          <p class="feature-card__text">Parents deserve clear updates, consistent routines, and trust. We keep you informed every step of the way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Schedule -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-subtitle">Daily Routine</p>
+        <h2 class="section-title">A day at Love Bugs</h2>
+        <p class="section-intro">We customize routines by age and developmental stage to ensure every child gets what they need.</p>
+      </div>
+      <div class="schedule">
+        <div class="schedule-item">
+          <div class="schedule-item__icon">🌅</div>
+          <div class="schedule-item__content">
+            <h4>Arrival & Morning Welcome</h4>
+            <p>Warm greetings and transition time to start the day right</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item__icon">⭕</div>
+          <div class="schedule-item__content">
+            <h4>Circle Time</h4>
+            <p>Songs, calendar, stories, and early literacy activities</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item__icon">🎨</div>
+          <div class="schedule-item__content">
+            <h4>Learning Centers</h4>
+            <p>Fine motor, art, sensory, and pretend play stations</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item__icon">🍎</div>
+          <div class="schedule-item__content">
+            <h4>Snack / Mealtime</h4>
+            <p>Nutritious meals and social dining experience</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item__icon">🏃</div>
+          <div class="schedule-item__content">
+            <h4>Outdoor Play / Movement</h4>
+            <p>Active play and gross motor development</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item__icon">😴</div>
+          <div class="schedule-item__content">
+            <h4>Quiet Time / Rest</h4>
+            <p>Restful period for growing minds and bodies</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item__icon">🧩</div>
+          <div class="schedule-item__content">
+            <h4>Hands-on Learning</h4>
+            <p>Numbers, letters, shapes, and science exploration</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item__icon">👋</div>
+          <div class="schedule-item__content">
+            <h4>Afternoon Pick-Up & Wrap-Up</h4>
+            <p>Review of the day and happy farewells</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enrollment Info -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-subtitle">Getting Started</p>
+        <h2 class="section-title">Enrollment at a glance</h2>
+      </div>
+      <div class="enrollment-grid">
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">📍</span>
+          <div>
+            <strong>Location</strong>
+            <span>Decatur/Snapfinger, DeKalb County, GA</span>
+          </div>
+        </div>
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">🏠</span>
+          <div>
+            <strong>Program Type</strong>
+            <span>Georgia Family Child Care Learning Home (FCCLH)</span>
+          </div>
+        </div>
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">👶</span>
+          <div>
+            <strong>Capacity</strong>
+            <span>6 or fewer children</span>
+          </div>
+        </div>
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">📅</span>
+          <div>
+            <strong>Ages Served</strong>
+            <span>5 weeks – 5+ years</span>
+          </div>
+        </div>
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">🍽️</span>
+          <div>
+            <strong>Meals</strong>
+            <span>Breakfast, Lunch, PM Snack (provided at a fee, upon request)</span>
+          </div>
+        </div>
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">⏰</span>
+          <div>
+            <strong>Day Care Hours</strong>
+            <span>Weekdays: 8:00 AM – 6:00 PM</span>
+          </div>
+        </div>
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">🌙</span>
+          <div>
+            <strong>After-School Care</strong>
+            <span>Weekdays: 5:00 AM – 8:00 AM & 6:00 PM – 10:00 PM</span>
+          </div>
+        </div>
+        <div class="enrollment-item">
+          <span class="enrollment-item__icon">🌟</span>
+          <div>
+            <strong>Overnight Care</strong>
+            <span>Weekdays: 10:00 PM – 7:00 AM | Weekends upon request</span>
+          </div>
+        </div>
+      </div>
+      <div class="cta-banner">
+        <h3>Interested in enrollment?</h3>
+        <p>Schedule a tour and we'll walk you through openings, tuition, and what your child's first week will look like.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="https://calendly.com/your-link" class="btn btn--white" target="_blank" rel="noopener">Schedule a Tour</a>
+          <a href="contact.html#enrollment" class="btn btn--outline" style="border-color: white; color: white;">Request Enrollment Info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <span class="logo__icon">🐞</span>
+            <span class="logo__text">Love <span>Bugs</span></span>
+          </a>
+          <p>A warm, structured Georgia Family Child Care Learning Home where little learners grow big confidence.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p>Decatur/Snapfinger<br>DeKalb County, GA</p>
+          <p class="footer__phone">(XXX) XXX-XXXX</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Love Bugs Learning Home. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      if (navToggle && nav) {
+        navToggle.addEventListener('click', function() {
+          nav.classList.toggle('nav--open');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
