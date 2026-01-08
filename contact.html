@@ -45,7 +45,7 @@
       --color-text: #4A4A4A; --color-text-light: #6B6B6B; --color-text-dark: #2D2D2D;
       --bg-primary: var(--color-cream); --bg-secondary: var(--color-white); --bg-tertiary: var(--color-cream-dark);
       --text-primary: var(--color-text-dark); --text-secondary: var(--color-text); --text-muted: var(--color-text-light);
-      --header-bg: var(--color-white); --card-bg: var(--color-white);
+      --header-bg: var(--color-cream); --card-bg: var(--color-white);
       --footer-bg: #2D2D2D; --footer-text: rgba(255, 255, 255, 0.8);
       --font-display: 'Nunito', sans-serif; --font-body: 'Lato', sans-serif;
       --space-xs: 0.5rem; --space-sm: 1rem; --space-md: 1.5rem; --space-lg: 2rem; --space-xl: 3rem; --space-3xl: 6rem;
@@ -200,7 +200,7 @@
           <div class="contact-list">
             <div class="contact-list__item"><div class="contact-list__icon">📍</div><div><strong>Location</strong><span>Decatur/Snapfinger, DeKalb County, GA<br>(Exact address shared after initial contact)</span></div></div>
             <div class="contact-list__item"><div class="contact-list__icon">📞</div><div><strong>Phone</strong><span>(412) 510-1823</span></div></div>
-            <div class="contact-list__item"><div class="contact-list__icon">📧</div><div><strong>Email</strong><span>lovebugsnannyservices@gmail.com</span></div></div>
+            <div class="contact-list__item"><div class="contact-list__icon">📧</div><div><strong>Email</strong><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="35595a4350574052465b545b5b4c465047435c565046755258545c591b565a58">[email&#160;protected]</a></span></div></div>
             <div class="contact-list__item"><div class="contact-list__icon">📅</div><div><strong>Schedule a Tour</strong><span><a href="https://calendly.com/your-link" target="_blank" rel="noopener">Book via Calendly →</a></span></div></div>
           </div>
           <div class="contact-hours">
@@ -307,7 +307,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const themeToggle = document.querySelector('.theme-toggle');
     const html = document.documentElement;
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -315,11 +315,4 @@
     themeToggle.addEventListener('click', () => {
       const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    navToggle.addEventListener('click', () => nav.classList.toggle('nav--open'));
-  </script>
-</body>
-</html>
+      localStorage.setItem('the
