@@ -104,12 +104,13 @@
       .theme-toggle { margin: var(--space-sm) 0 0 0; }
     }
 
-    .btn { border: none; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
-    .btn--white { background-color: var(--color-white); color: var(--color-sage-dark); }
+    .btn { border: 2px solid transparent; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
+    .btn--white { background-color: var(--color-white); border-color: var(--color-white); color: var(--color-sage-dark); }
     .btn--white:hover { background-color: var(--color-cream); transform: translateY(-2px); }
     .btn--outline { background-color: transparent; border: 2px solid var(--color-sage); color: var(--color-sage); }
     .btn--outline:hover { background-color: var(--color-sage); color: var(--color-white); }
     .btn-group { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+    .btn-group .btn { flex: 1 1 200px; min-width: 200px; max-width: 280px; text-align: center; }
 
     .page-header { background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%); padding: var(--space-3xl) 0 var(--space-xl); position: relative; text-align: center; }
     .page-header::before { background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='4' fill='%237BA085' fill-opacity='0.08'/%3E%3C/svg%3E"); content: ''; inset: 0; position: absolute; }
@@ -220,7 +221,7 @@
         <div class="footer__contact">
           <h4>Contact</h4>
           <p>Decatur/Snapfinger<br>DeKalb County, GA</p>
-          <p>(XXX) XXX-XXXX</p>
+          <p>(412) 510-1823</p>
         </div>
       </div>
       <div class="footer__bottom"><p>&copy; 2025 Love Bugs Learning Home. All rights reserved.</p></div>

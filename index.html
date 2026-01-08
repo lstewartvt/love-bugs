@@ -155,16 +155,17 @@
       .theme-toggle { margin: var(--space-sm) 0 0 0; }
     }
 
-    .btn { border: none; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
-    .btn--primary { background-color: var(--color-coral); color: var(--color-white); }
-    .btn--primary:hover { background-color: var(--color-coral-dark); color: var(--color-white); transform: translateY(-2px); }
-    .btn--secondary { background-color: var(--color-sage); color: var(--color-white); }
-    .btn--secondary:hover { background-color: var(--color-sage-dark); color: var(--color-white); transform: translateY(-2px); }
+    .btn { border: 2px solid transparent; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
+    .btn--primary { background-color: var(--color-coral); border-color: var(--color-coral); color: var(--color-white); }
+    .btn--primary:hover { background-color: var(--color-coral-dark); border-color: var(--color-coral-dark); color: var(--color-white); transform: translateY(-2px); }
+    .btn--secondary { background-color: var(--color-sage); border-color: var(--color-sage); color: var(--color-white); }
+    .btn--secondary:hover { background-color: var(--color-sage-dark); border-color: var(--color-sage-dark); color: var(--color-white); transform: translateY(-2px); }
     .btn--outline { background-color: transparent; border: 2px solid var(--color-sage); color: var(--color-sage); }
     .btn--outline:hover { background-color: var(--color-sage); color: var(--color-white); }
-    .btn--white { background-color: var(--color-white); color: var(--color-sage-dark); }
-    .btn--white:hover { background-color: var(--color-cream); color: var(--color-sage-dark); transform: translateY(-2px); }
+    .btn--white { background-color: var(--color-white); border-color: var(--color-white); color: var(--color-sage-dark); }
+    .btn--white:hover { background-color: var(--color-cream); border-color: var(--color-cream); color: var(--color-sage-dark); transform: translateY(-2px); }
     .btn-group { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+    .btn-group .btn { flex: 1 1 200px; min-width: 200px; max-width: 280px; text-align: center; }
 
     .hero { background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%); overflow: hidden; padding: var(--space-3xl) 0; position: relative; }
     .hero::before { background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='4' fill='%237BA085' fill-opacity='0.08'/%3E%3C/svg%3E"); content: ''; inset: 0; position: absolute; }
@@ -364,7 +365,6 @@
         <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image3.jpeg?updatedAt=1767763424382" alt="Love Bugs Learning Home" class="gallery-item">
         <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image4.jpeg?updatedAt=1767763424364" alt="Love Bugs Learning Home" class="gallery-item">
         <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image5.jpeg?updatedAt=1767763424344" alt="Love Bugs Learning Home" class="gallery-item">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image6.jpeg?updatedAt=1767763424350" alt="Love Bugs Learning Home" class="gallery-item">
         <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image7.jpeg?updatedAt=1767763424316" alt="Love Bugs Learning Home" class="gallery-item">
       </div>
     </div>
@@ -438,7 +438,7 @@
         <div class="footer__contact">
           <h4>Contact</h4>
           <p>Decatur/Snapfinger<br>DeKalb County, GA</p>
-          <p class="footer__phone">(XXX) XXX-XXXX</p>
+          <p class="footer__phone">(412) 510-1823</p>
         </div>
       </div>
       <div class="footer__bottom">

@@ -106,11 +106,11 @@
       .theme-toggle { margin: var(--space-sm) 0 0 0; }
     }
 
-    .btn { border: none; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
-    .btn--primary { background-color: var(--color-coral); color: var(--color-white); }
-    .btn--primary:hover { background-color: var(--color-coral-dark); color: var(--color-white); transform: translateY(-2px); }
-    .btn--secondary { background-color: var(--color-sage); color: var(--color-white); }
-    .btn--secondary:hover { background-color: var(--color-sage-dark); color: var(--color-white); transform: translateY(-2px); }
+    .btn { border: 2px solid transparent; border-radius: var(--radius-lg); cursor: pointer; display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1rem; font-weight: 700; gap: var(--space-xs); justify-content: center; padding: var(--space-sm) var(--space-lg); text-decoration: none; transition: all var(--transition-fast); }
+    .btn--primary { background-color: var(--color-coral); border-color: var(--color-coral); color: var(--color-white); }
+    .btn--primary:hover { background-color: var(--color-coral-dark); border-color: var(--color-coral-dark); color: var(--color-white); transform: translateY(-2px); }
+    .btn--secondary { background-color: var(--color-sage); border-color: var(--color-sage); color: var(--color-white); }
+    .btn--secondary:hover { background-color: var(--color-sage-dark); border-color: var(--color-sage-dark); color: var(--color-white); transform: translateY(-2px); }
 
     .page-header { background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%); padding: var(--space-3xl) 0 var(--space-xl); position: relative; text-align: center; }
     .page-header::before { background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='4' fill='%237BA085' fill-opacity='0.08'/%3E%3C/svg%3E"); content: ''; inset: 0; position: absolute; }
@@ -199,8 +199,8 @@
           <h3>Get in Touch</h3>
           <div class="contact-list">
             <div class="contact-list__item"><div class="contact-list__icon">📍</div><div><strong>Location</strong><span>Decatur/Snapfinger, DeKalb County, GA<br>(Exact address shared after initial contact)</span></div></div>
-            <div class="contact-list__item"><div class="contact-list__icon">📞</div><div><strong>Phone</strong><span>(XXX) XXX-XXXX</span></div></div>
-            <div class="contact-list__item"><div class="contact-list__icon">📧</div><div><strong>Email</strong><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5a0a8a4aca985a0bda4a8b5a9a0eba6aaa8">[email&#160;protected]</a></span></div></div>
+            <div class="contact-list__item"><div class="contact-list__icon">📞</div><div><strong>Phone</strong><span>(412) 510-1823</span></div></div>
+            <div class="contact-list__item"><div class="contact-list__icon">📧</div><div><strong>Email</strong><span>lovebugsnannyservices@gmail.com</span></div></div>
             <div class="contact-list__item"><div class="contact-list__icon">📅</div><div><strong>Schedule a Tour</strong><span><a href="https://calendly.com/your-link" target="_blank" rel="noopener">Book via Calendly →</a></span></div></div>
           </div>
           <div class="contact-hours">
@@ -217,7 +217,7 @@
         <div class="form-card">
           <h3>Send Us a Message</h3>
           <p class="form-card__intro">Have a question? Fill out the form below and we'll get back to you soon.</p>
-          <form id="contact-form">
+          <form id="contact-form" action="https://formspree.io/lovebugsnannyservices@gmail.com" method="POST">
             <div class="form-row">
               <div class="form-group"><label class="form-label" for="contact-name">Your Name <span>*</span></label><input type="text" id="contact-name" name="name" class="form-input" required></div>
               <div class="form-group"><label class="form-label" for="contact-email">Email Address <span>*</span></label><input type="email" id="contact-email" name="email" class="form-input" required></div>
@@ -240,7 +240,7 @@
         <p class="section-intro">Fill out the form below and we'll send you information about openings, rates, and next steps.</p>
       </div>
       <div class="form-card" style="max-width: 700px; margin: 0 auto;">
-        <form id="enrollment-form">
+        <form id="enrollment-form" action="https://formspree.io/lovebugsnannyservices@gmail.com" method="POST">
           <h4 class="form-section-title">Parent/Guardian Information</h4>
           <div class="form-row">
             <div class="form-group"><label class="form-label" for="parent-first">First Name <span>*</span></label><input type="text" id="parent-first" name="parent_first" class="form-input" required></div>
@@ -300,14 +300,14 @@
         <div class="footer__contact">
           <h4>Contact</h4>
           <p>Decatur/Snapfinger<br>DeKalb County, GA</p>
-          <p>(XXX) XXX-XXXX</p>
+          <p>(412) 510-1823</p>
         </div>
       </div>
       <div class="footer__bottom"><p>&copy; 2025 Love Bugs Learning Home. All rights reserved.</p></div>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const themeToggle = document.querySelector('.theme-toggle');
     const html = document.documentElement;
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -316,3 +316,10 @@
       const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+    });
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    navToggle.addEventListener('click', () => nav.classList.toggle('nav--open'));
+  </script>
+</body>
+</html>
