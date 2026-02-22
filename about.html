@@ -39,7 +39,8 @@
   <link rel="preconnect" href="https://ik.imagekit.io">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
   <style>
     :root {
       --color-sage: #0A4409; --color-sage-light: #2D7A2D; --color-sage-dark: #062D06;
@@ -92,7 +93,7 @@
     .logo__img--dark { display: none; }
     [data-theme="dark"] .logo__img--light { display: none; }
     [data-theme="dark"] .logo__img--dark { display: block; }
-    .logo__text { color: var(--text-primary); font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; }
+    .logo__text { color: var(--text-primary); font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; min-width: 100px; }
     .logo__text span { color: var(--color-sage); }
     .nav { align-items: center; display: flex; gap: var(--space-lg); }
     .nav__link { color: var(--text-secondary); font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; padding: var(--space-xs) 0; position: relative; }
@@ -223,7 +224,7 @@
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="/" class="logo"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm.png" alt="Love Bugs Learning Home" class="logo__img logo__img--light"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm-dark.png?updatedAt=1767890021796" alt="Love Bugs Learning Home" class="logo__img logo__img--dark"><span class="logo__text">Love <span>Bugs</span></span></a>
+      <a href="/" class="logo"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm.png?tr=w-90,q-80" alt="Love Bugs Learning Home" class="logo__img logo__img--light" width="47" height="45"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm-dark.png?tr=w-90,q-80" alt="Love Bugs Learning Home" class="logo__img logo__img--dark" width="47" height="45"><span class="logo__text">Love <span>Bugs</span></span></a>
       <button class="nav-toggle" aria-label="Toggle navigation"><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span></button>
       <nav class="nav">
         <a href="/" class="nav__link">Home</a>
@@ -237,6 +238,8 @@
       </nav>
     </div>
   </header>
+
+  <main>
 
   <section class="page-header">
     <div class="container page-header__content">
@@ -256,7 +259,7 @@
           <p>We're a home-based learning environment designed to feel safe and familiar while still offering the structure and educational focus children need to grow.</p>
           <p>Our goal is simple: help every child build a strong foundation, academically and socially, through daily routines, meaningful learning, and joyful play.</p>
         </div>
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image3.jpeg?updatedAt=1767763424382" alt="Love Bugs Learning Home" class="about-intro__image">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image3.jpeg?tr=w-800,q-80" alt="Love Bugs Learning Home" class="about-intro__image" width="600" height="450" loading="lazy">
       </div>
     </div>
   </section>
@@ -268,7 +271,7 @@
         <h2 class="section-title">Ms. Alexis Patterson</h2>
       </div>
       <div class="bio-card">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image2.jpeg" alt="Ms. Alexis Patterson" class="bio-card__image">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image2.jpeg?tr=w-400,q-80" alt="Ms. Alexis Patterson" class="bio-card__image" width="300" height="400" loading="lazy">
         <div class="bio-card__content">
           <h3>Your Child's Early Learning Guide</h3>
           <p class="bio-card__role">Primary Caregiver • 7+ Years Experience</p>
@@ -346,11 +349,13 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <a href="/" class="logo"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-dark.png?updatedAt=1767763303774" alt="Love Bugs Learning Home" class="footer__logo"></a>
+          <a href="/" class="logo"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-dark.png?tr=w-200,q-80" alt="Love Bugs Learning Home" class="footer__logo" width="120" height="60" loading="lazy"></a>
           <p>A warm, structured Georgia Family Child Care Learning Home where little learners grow big confidence.</p>
         </div>
         <div class="footer__nav">

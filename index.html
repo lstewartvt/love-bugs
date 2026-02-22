@@ -39,7 +39,9 @@
   <link rel="preconnect" href="https://ik.imagekit.io">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image1.jpeg?tr=w-800,q-80">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
   <style>
     :root {
       --color-sage: #0A4409;
@@ -133,7 +135,7 @@
     .logo__img--dark { display: none; }
     [data-theme="dark"] .logo__img--light { display: none; }
     [data-theme="dark"] .logo__img--dark { display: block; }
-    .logo__text { color: var(--text-primary); font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; }
+    .logo__text { color: var(--text-primary); font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; min-width: 100px; }
     .logo__text span { color: var(--color-sage); }
     .nav { align-items: center; display: flex; gap: var(--space-lg); }
     .nav__link { color: var(--text-secondary); font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; padding: var(--space-xs) 0; position: relative; }
@@ -186,7 +188,7 @@
     .hero__caregiver-avatar { border-radius: var(--radius-full); height: 50px; object-fit: cover; width: 50px; }
     .hero__caregiver-info strong { color: var(--text-primary); display: block; font-family: var(--font-display); }
     .hero__caregiver-info span { color: var(--text-muted); font-size: 0.9rem; }
-    .hero__image { position: relative; }
+    .hero__image { position: relative; min-height: 300px; }
     .hero__image-main { aspect-ratio: 4/3; border-radius: var(--radius-lg); box-shadow: var(--shadow-lifted); object-fit: cover; width: 100%; }
     .hero__floating-card { background-color: var(--card-bg); border-radius: var(--radius-md); bottom: -20px; box-shadow: var(--shadow-medium); left: -30px; padding: var(--space-sm) var(--space-md); position: absolute; }
     .hero__floating-card strong { color: var(--color-sage); display: block; font-family: var(--font-display); font-size: 1.5rem; }
@@ -297,7 +299,7 @@
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="logo">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm.png" alt="Love Bugs Learning Home" class="logo__img logo__img--light"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm-dark.png?updatedAt=1767890021796" alt="Love Bugs Learning Home" class="logo__img logo__img--dark">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm.png?tr=w-90,q-80" alt="Love Bugs Learning Home" class="logo__img logo__img--light" width="47" height="45"><img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-sm-dark.png?tr=w-90,q-80" alt="Love Bugs Learning Home" class="logo__img logo__img--dark" width="47" height="45">
         <span class="logo__text">Love <span>Bugs</span></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -318,14 +320,14 @@
     </div>
   </header>
 
-  <section class="hero">
+  <main>
     <div class="container hero__inner">
       <div class="hero__content">
         <span class="hero__badge">Georgia Family Child Care Learning Home</span>
         <h1 class="hero__title">Where little learners grow <span>big confidence</span></h1>
         <p class="hero__description">A warm, structured learning home in DeKalb County focused on early academics, social skills, and joyful routines for children ages 5 weeks to 5+ years.</p>
         <div class="hero__caregiver">
-          <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image2.jpeg" alt="Ms. Alexis Patterson" class="hero__caregiver-avatar">
+          <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image2.jpeg?tr=w-100,h-100,q-80" alt="Ms. Alexis Patterson" class="hero__caregiver-avatar" width="50" height="50">
           <div class="hero__caregiver-info">
             <strong>Ms. Alexis Patterson</strong>
             <span>7+ years of child care experience</span>
@@ -337,7 +339,7 @@
         </div>
       </div>
       <div class="hero__image">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image1.jpeg" alt="Children learning at Love Bugs" class="hero__image-main">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image1.jpeg?tr=w-800,q-80" alt="Children learning at Love Bugs" class="hero__image-main" width="600" height="450" fetchpriority="high">
         <div class="hero__floating-card">
           <strong>6 or fewer</strong>
           <span>children for individual attention</span>
@@ -409,10 +411,10 @@
         <p class="section-intro">See the warm, nurturing environment where children learn, play, and grow every day.</p>
       </div>
       <div class="gallery-grid">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image3.jpeg" alt="Love Bugs Learning Home" class="gallery-item">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image4.jpeg?updatedAt=1767763424364" alt="Love Bugs Learning Home" class="gallery-item">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image4.jpeg" alt="Love Bugs Learning Home" class="gallery-item">
-        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image5.jpeg" alt="Love Bugs Learning Home" class="gallery-item">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image3.jpeg?tr=w-600,q-80" alt="Love Bugs Learning Home" class="gallery-item" width="400" height="300" loading="lazy">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/image4.jpeg?tr=w-600,q-80" alt="Love Bugs Learning Home" class="gallery-item" width="400" height="300" loading="lazy">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image4.jpeg?tr=w-600,q-80" alt="Love Bugs Learning Home" class="gallery-item" width="400" height="300" loading="lazy">
+        <img src="https://ik.imagekit.io/k0nrt15/love-bugs/gallery/20260220-image5.jpeg?tr=w-600,q-80" alt="Love Bugs Learning Home" class="gallery-item" width="400" height="300" loading="lazy">
       </div>
     </div>
   </section>
@@ -464,12 +466,14 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
           <a href="/" class="logo">
-            <img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-dark.png?updatedAt=1767763303774" alt="Love Bugs Learning Home" class="footer__logo">
+            <img src="https://ik.imagekit.io/k0nrt15/love-bugs/logo-dark.png?tr=w-200,q-80" alt="Love Bugs Learning Home" class="footer__logo" width="120" height="60" loading="lazy">
           </a>
           <p>A warm, structured Georgia Family Child Care Learning Home where little learners grow big confidence.</p>
         </div>
