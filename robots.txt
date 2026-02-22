@@ -1,0 +1,8 @@
+# robots.txt for Love Bugs Learning Home
+# https://www.lovebugslearninghome.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.lovebugslearninghome.com/sitemap.xml
